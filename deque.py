@@ -5,6 +5,25 @@
 # Hint: pip3 install llist
 # from llist import dllist
 
+from llist import dllist
+
 class Deque:
 
-    pass
+    def __init__(self):
+        self.data = dllist()
+
+    def enqueue_left(self, value):
+        self.data.appendleft(value)
+
+    def enqueue_right(self, value):
+        self.data.appendright(value)
+
+    def dequeue_left(self):
+        return self.data.popleft()
+
+    def dequeue_right(self):
+        return self.data.popright()
+
+    def is_empty(self):
+        return self.data.size == 0
+       
